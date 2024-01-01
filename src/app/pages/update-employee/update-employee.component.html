@@ -1,0 +1,20 @@
+
+<form class="w-50 m-auto " [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3">
+        <label  class="form-label">Username</label>
+        <input type="text" class="form-control" formControlName="userName" >
+    </div>
+
+    <div class="mb-3">
+      <label  class="form-label">Email address</label>
+      <input type="email" class="form-control" formControlName="email">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control" formControlName="password">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>

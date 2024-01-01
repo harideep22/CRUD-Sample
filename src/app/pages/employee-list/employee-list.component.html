@@ -1,0 +1,23 @@
+
+
+<table class="custom-table tba">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">USERNAME</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">PASSWORD</th>
+      <th scope="col">ACTIVITY</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let emp of employeeList; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ emp.userName }}</td>
+      <td>{{ emp.email }}</td>
+      <td>{{ emp.password }}</td>
+      <td><button class="btn btn-danger" (click)="deleteClick(emp.id)">Delete</button> <button class="btn btn-dark ms-1 " (click)="updateEmployee(emp.id)">Update</button> </td>
+    </tr>
+  </tbody>
+</table>
